@@ -3,21 +3,21 @@
 <head>
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="description" content="La panthère entreprise de web design, formulaire de contact">
+	<meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="shortcut icon" type="image/png" href="favicon.jpg">
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	
-	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/et-line.min.css">
-	<script src="./js/jquery-2.1.0.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/blocs.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="./css/et-line.css">
+	<!---<script src="./js/jquery-2.1.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/blocs.js"></script>
 	<script src="./js/jqBootstrapValidation.js"></script>
-	<script src="./js/formHandler.js"></script>
+	<script src="./js/formHandler.js"></script>-->
 	<link rel="stylesheet" type="text/css" href="style.css">
-    <title>page2</title>
+    <title>Contact - Agence La Panthère</title>
 </head>
 <body>
     <!-- Principal conteneur -->
@@ -28,9 +28,9 @@
 				<div class="container bloc-sm">
 					<nav class="navbar row">
 						<div class="navbar-header">
-							<div class="keywords" style="color:#cccccc;font-size:1px;">Agence web à paris, stratégie web, web design, illustrations, design de site web, site web, web, internet, site internet, site</div>
-							<a class="navbar-brand" href="index.html"><img src="img/agence-la-panthere-monochrome.svg" alt="paris web design logo agence web meilleure agence" height="40" /></a>
-							<div class="keywords" style="color:#cccccc;font-size:1px;">Agence web à paris, stratégie web, web design, illustrations, design de site web, site web, web, internet, site internet, site</div>
+							<!--<div class="keywords" style="color:#cccccc;font-size:1px;">Agence web à paris, stratégie web, web design, illustrations, design de site web, site web, web, internet, site internet, site</div>-->
+							<a class="navbar-brand" href="index.html"><img src="img/agence-la-panthere-monochrome.svg" alt="agence la panthère logo"/></a>
+							<!--<div class="keywords" style="color:#cccccc;font-size:1px;">Agence web à paris, stratégie web, web design, illustrations, design de site web, site web, web, internet, site internet, site</div>-->
 							<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 								<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 							</button>
@@ -38,12 +38,12 @@
 						<div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
 							<ul class="site-navigation nav navbar-nav">
 								<li>
-									<a href="index.html">Accueil</a>
+									<a title="page d'accueil" aria-label="page d'accueil" href="index.html">Accueil</a>
 								</li>
 								<li>
 								</li>
 								<li>
-								<!---->	<a href="page2.html">page2 &gt;</a>-->
+									<a title="formulaire de contact" aria-label="formulaire de contact" href="contact.html">Contact</a>
 								</li>
 							</ul>
 						</div>
@@ -79,29 +79,30 @@
 				<div class="container bloc-lg">
 					<div class="row">
 						<div class="col-sm-6">
-							<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+							<!--<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">-->
+							<form id="form_1"  fail-msg="">	
 								<div class="form-group">
-									<label>
+									<label for="nom">
 										Nom
 									</label>
-									<input id="name" type="text" class="form-control" required >
+									<input id="nom" type="text" name="nom" class="form-control" required >
 								</div>
 								<div class="form-group">
-									<label>
+									<label for="email">
 										Adresse email
 									</label>
-									<input id="email" class="form-control" type="email" required >
+									<input id="email" name="email" class="form-control" type="email" required >
 								</div>
 								<div class="form-group">
-									<label>
+									<label for="input_504">
 										Comment nous avez-vous connu ?
 									</label>
-									<input class="form-control" type="text" required id="input_504" >
+									<input class="form-control" type="text" required id="input_504" name="input_504">
 								</div>
 								<div class="form-group">
-									<label>
+									<label for="message">
 										Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
-									</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+									</label><textarea id="message" type="text" name="message" class="form-control" rows="4" cols="50" required></textarea>
 								</div> 
 								<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
 									Envoyer
@@ -120,7 +121,7 @@
 		<!-- bloc-7 END -->
 		
 		<!-- ScrollToTop Button -->
-		<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
+		<!--<a href="#" class="bloc-button btn btn-d scrollToTop" title="chevron-up" aria-label="chevron-up" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>-->
 		<!-- ScrollToTop Button END-->
 		
 		<!-- Footer - bloc-8 -->
@@ -135,22 +136,22 @@
 							<div class="row row-no-gutters social">
 								<div class="col-sm-3">
 									<div class="text-center">
-										<a class="social" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
+										<a class="social" title="twitter" aria-label="twitter" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
 									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="text-center">
-										<a class="social" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
+										<a class="social" title="facebook" aria-label="facebook" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
 									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="text-center">
-										<a class="social" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
+										<a class="social" title="dribbble" aria-label="dribbble" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
 									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="text-center">
-										<a class="social" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
+										<a class="social" title="instagram" aria-label="instagram" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
 									</div>
 								</div>
 							</div>

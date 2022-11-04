@@ -6,7 +6,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+*:focus{
+    border: 3px dotted black;
+}
 a,
 button {
     transition: all .3s ease-in-out;
@@ -100,7 +102,8 @@ a:hover {
 }
 
 .d-bloc {
-    color: rgba(255, 255, 255, .7);
+   /* color: rgba(255, 255, 255, .7);*/
+   
 }
 
 .d-bloc button:hover {
@@ -133,7 +136,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+/*    color: rgba(255, 255, 255, .6);*/
 }
 
 .d-bloc .a-btn:hover,

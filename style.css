@@ -1,5 +1,5 @@
 *:focus{
-    border: 2px solid red;
+    border: 1px dotted gray!important;
 }
 body {
     margin: 0;
